@@ -9,3 +9,11 @@ jobs:
         with:
           github-token: ${{ github.token }}
           dry-run: true
+      - name: Github Context
+        run: |
+          echo "${{ toJSON(github) }}"
+        shell: bash
+      - name: PullRequest Context
+        run: |
+          echo "${{ toJSON(github.event.pull_request) }}"
+        shell: bash
