@@ -1,10 +1,11 @@
 on:
   pull_request:
+    branches:
+      - '!graphite-base/**'
 
 jobs:
   dismiss:
     runs-on: ubuntu-latest
-    if: ${{ !startsWith(github.base_ref, 'graphite-base/') }}
     steps:
       - uses: ryancalhoun-brt/dismiss-stale-approvals@main
         with:
