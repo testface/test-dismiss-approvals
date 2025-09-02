@@ -4,6 +4,11 @@ on:
       - '*'
       - '!graphite-base/**'
 
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
 jobs:
   dismiss:
     runs-on: ubuntu-latest
