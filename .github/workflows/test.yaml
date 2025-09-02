@@ -7,7 +7,7 @@ jobs:
   dismiss:
     runs-on: ubuntu-latest
     steps:
-      - uses: ryancalhoun-brt/dismiss-stale-approvals@main
+      - uses: ryancalhoun-brt/dismiss-stale-approvals@paginate-reviews
         with:
           github-token: ${{ github.token }}
           dry-run: true
